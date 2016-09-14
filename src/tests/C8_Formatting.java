@@ -56,7 +56,7 @@ public class C8_Formatting {
 	}
 	
 	// Test Calendar Class (Abstract)
-	// Method: getInstance()
+	// Constructor: getInstance()
 	// Method: setTime(Date d)
 	// Method: getTime()
 	// Method: getFirstDayOfWeek()
@@ -102,10 +102,10 @@ public class C8_Formatting {
 	}
 	
 	// Test DateFormat class (Abstract)
-	// Method: getIntance()
-	// Method: getDateIntance()
-	// Method: getDateIntance(attr a)
-	// Method: getDateIntance(attr a, Locale l)
+	// Constructor: getIntance()
+	// Constructor: getDateIntance()
+	// Constructor: getDateIntance(attr a)
+	// Constructor: getDateIntance(attr a, Locale l)
 	// Method: format(Date d)
 	// Method: parse(String s) => ParseException
 	public static void testDateFormat() {
@@ -411,7 +411,7 @@ public class C8_Formatting {
 	// Flags: left justify (-), sign (+), pad with zeroes (0), thousands separation (,), enclose negative (()
 	// Conversion: boolean (b), char (c), integer (d), floating point (f), string (s)
 	// IllegalFormatFlagsException (Runtime): (-) and (0) not can be used together
-	// IllegalFormatConversionException (Runtime): [.precision] can be used only in float type
+	// IllegalFormatConversionException (Runtime): [.precision] can be used only in float type or conversion are wrong (except boolean)
 	// MissingFormatWidthException (Runtime): if (-) or (0) are used, [width] must be present
 	
 	// Method: printf(String sources, String[] vars)
@@ -430,7 +430,8 @@ public class C8_Formatting {
 		System.out.format("> %2$b + %1$5d <\n", i1, false);
 		System.out.format("> %1$0,10d <\n", i2);
 		System.out.format("> %1$0,10.2f <\n", f1);
-		System.out.format("> %0+20d <\n", i2);
+		System.out.format("> %0+20d <\n", i1);
+		System.out.format("> %b <\n", f1);
 	}
 	
 	// Test ResourceBundle Class
