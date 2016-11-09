@@ -74,6 +74,7 @@ public class C8_Formatting {
 		
 		// Set a date
 		c1.set(2010, 11, 14);
+		System.out.println(c1.getTime());
 		
 		c1.setTime(d1);
 		

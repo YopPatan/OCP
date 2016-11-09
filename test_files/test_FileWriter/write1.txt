@@ -1,0 +1,3 @@
+test write several lines
+--line test 1
+--line test 2
